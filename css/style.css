@@ -72,6 +72,7 @@ html,body{
 }
 
 .container>h1{
+  font-size: 1.5em;
   text-transform: uppercase;
   align-self: center;
   font-weight: 900;
@@ -90,7 +91,8 @@ input#email{
   background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: 20px 10px;
-  border:none;
+  border:1px solid #fff;
+  transition: border 0.5s ease-in-out;
   height:40px;
   margin-top:15px;
   text-indent: 20px;
@@ -105,12 +107,18 @@ input#senha{
   background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: 20px 10px;
-  border:none;
+  border:1px solid #fff;
+  transition: border 0.5s ease-in-out;
   height:40px;
   margin-top:15px;
   text-indent: 20px;
   border-radius: 3px;
   opacity: 0.3;
+}
+
+input#email:hover, input#senha:hover{
+  border: 1px solid #010101;
+  transition: border 0.5s ease-in-out;
 }
 
 
@@ -229,11 +237,12 @@ fieldset{
   cursor: pointer;
   margin-bottom: 30px;
   border-radius: 3px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .btn-submit:hover{
   background-color: #e56bac;
-  transition: background-color 0.6s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .container>p{
@@ -263,6 +272,9 @@ fieldset{
   cursor: pointer;
   border-radius:2px;
   margin:0;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1px;
+  transition: transform 0.1s ease-in-out;
 }
 
 .google{
@@ -277,10 +289,14 @@ fieldset{
   border:1px solid #bababa;
   cursor: pointer;
   border-radius: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1px;
+  transition: transform 0.1s ease-in-out;
 }
 
 .facebook:hover,.google:hover{
   transform:scale(1.03);
+  transition: transform 0.1s ease-in-out;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
@@ -308,28 +324,29 @@ fieldset{
 
 .container>.signup>a{
   color:#bababa;
+  transition: color 0.3s ease-in-out;
   margin-left:5px;
 }
 
 .container>.signup>a:hover{
   color:#010101;
+  transition: color 0.3s ease-in-out;
 }
 
 .background-circle{
   position: absolute;
-  bottom:0;
-  left:0;
-  width:700px;
-  height:700px;
-  border-top-right-radius:100%;
+  bottom:-1420px;
+  left:-750px;
+  width:2000px;
+  height:2000px;
+  border-radius:52%;
   background-color: #010101;
   opacity:0.1;
-  overflow: hidden;
 }
 
-/* media query to fix mobile bug (background circle)*/
+/* media query to fix mobile scrolling bug (background circle)*/
 @media(max-width:475px){
   .background-circle{
     display: none;
   }  
-}
+} 
